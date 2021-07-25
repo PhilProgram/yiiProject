@@ -1,0 +1,26 @@
+SQL Tables
+
+Database name is "yii"
+
+Here are the tables.
+
+CREATE TABLE `tasks` (
+  `task_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `user_login` varchar(60) NOT NULL,
+  `task_name` varchar(60) NOT NULL,
+  `task_description` varchar(150) DEFAULT NULL,
+  PRIMARY KEY (`task_id`),
+  KEY `idx_task_name_key` (`task_name`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8
+
+	
+CREATE TABLE `users` (
+  `user_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `user_login` varchar(100) NOT NULL,
+  `user_password` varchar(64) NOT NULL,
+  `user_firstname` varchar(50) NOT NULL,
+  `user_surname` varchar(50) NOT NULL,
+  `user_email` varchar(100) NOT NULL,
+  PRIMARY KEY (`user_id`),
+  KEY `idx_user_login_key` (`user_login`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8
