@@ -20,7 +20,7 @@ class Users extends CActiveRecord
 	{
 		return 'users';
 	}
-
+  
 	/**
 	 * @return array validation rules for model attributes.
 	 */

@@ -3358,3 +3358,506 @@ REQUEST_URI=/yiitester/index.php?r=users/index&view=users
 in C:\xampp\htdocs\yiitester\protected\views\users\index.php (18)
 in C:\xampp\htdocs\yiitester\protected\controllers\UsersController.php (117)
 in C:\xampp\htdocs\yiitester\index.php (13)
+2021/07/26 11:17:18 [error] [exception.CException] CException: UserIdentity and its behaviors do not have a method or closure named "render". in C:\xampp\htdocs\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\yiitester\protected\components\UserIdentity.php(41): CComponent->__call('render', Array)
+#1 C:\xampp\htdocs\yiitester\protected\models\LoginForm.php(54): UserIdentity->authenticate()
+#2 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#3 C:\xampp\htdocs\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#4 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), Array)
+#5 C:\xampp\htdocs\yiitester\protected\controllers\SiteController.php(111): CModel->validate()
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\yiitester\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/yiitester/index.php?r=site/login
+HTTP_REFERER=http://localhost/yiitester/index.php?r=site/login
+---
+2021/07/26 11:20:16 [error] [exception.Error] Error: Object of class CActiveDataProvider could not be converted to string in C:\xampp\htdocs\yiitester\protected\components\UserIdentity.php:40
+Stack trace:
+#0 C:\xampp\htdocs\yiitester\protected\models\LoginForm.php(54): UserIdentity->authenticate()
+#1 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#2 C:\xampp\htdocs\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#3 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), Array)
+#4 C:\xampp\htdocs\yiitester\protected\controllers\SiteController.php(111): CModel->validate()
+#5 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#11 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\yiitester\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/yiitester/index.php?r=site/login
+HTTP_REFERER=http://localhost/yiitester/index.php?r=site/login
+---
+2021/07/26 11:26:16 [error] [exception.Error] Error: Object of class CDbCriteria could not be converted to string in C:\xampp\htdocs\yiitester\protected\components\UserIdentity.php:40
+Stack trace:
+#0 C:\xampp\htdocs\yiitester\protected\models\LoginForm.php(54): UserIdentity->authenticate()
+#1 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#2 C:\xampp\htdocs\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#3 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), Array)
+#4 C:\xampp\htdocs\yiitester\protected\controllers\SiteController.php(111): CModel->validate()
+#5 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#11 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\yiitester\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/yiitester/index.php?r=site/login
+HTTP_REFERER=http://localhost/yiitester/index.php?r=site/login
+---
+2021/07/26 11:26:51 [error] [exception.Error] Error: Object of class CDbCriteria could not be converted to string in C:\xampp\htdocs\yiitester\protected\components\UserIdentity.php:40
+Stack trace:
+#0 C:\xampp\htdocs\yiitester\protected\models\LoginForm.php(54): UserIdentity->authenticate()
+#1 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#2 C:\xampp\htdocs\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#3 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), Array)
+#4 C:\xampp\htdocs\yiitester\protected\controllers\SiteController.php(111): CModel->validate()
+#5 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#11 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\yiitester\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/yiitester/index.php?r=site/login
+HTTP_REFERER=http://localhost/yiitester/index.php?r=site/login
+---
+2021/07/26 11:30:15 [error] [exception.CException] CException: CActiveDataProvider and its behaviors do not have a method or closure named "find". in C:\xampp\htdocs\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\yiitester\protected\components\UserIdentity.php(41): CComponent->__call('find', Array)
+#1 C:\xampp\htdocs\yiitester\protected\models\LoginForm.php(54): UserIdentity->authenticate()
+#2 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#3 C:\xampp\htdocs\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#4 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), Array)
+#5 C:\xampp\htdocs\yiitester\protected\controllers\SiteController.php(111): CModel->validate()
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\yiitester\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/yiitester/index.php?r=site/login
+HTTP_REFERER=http://localhost/yiitester/index.php?r=site/login
+---
+2021/07/26 11:31:17 [error] [exception.CException] CException: CActiveDataProvider and its behaviors do not have a method or closure named "_isset". in C:\xampp\htdocs\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\yiitester\protected\components\UserIdentity.php(41): CComponent->__call('_isset', Array)
+#1 C:\xampp\htdocs\yiitester\protected\models\LoginForm.php(54): UserIdentity->authenticate()
+#2 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#3 C:\xampp\htdocs\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#4 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), Array)
+#5 C:\xampp\htdocs\yiitester\protected\controllers\SiteController.php(111): CModel->validate()
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\yiitester\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/yiitester/index.php?r=site/login
+HTTP_REFERER=http://localhost/yiitester/index.php?r=site/login
+---
+2021/07/26 11:38:35 [error] [exception.Error] Error: Object of class CDbCriteria could not be converted to string in C:\xampp\htdocs\yiitester\protected\components\UserIdentity.php:43
+Stack trace:
+#0 C:\xampp\htdocs\yiitester\protected\models\LoginForm.php(54): UserIdentity->authenticate()
+#1 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#2 C:\xampp\htdocs\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#3 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), Array)
+#4 C:\xampp\htdocs\yiitester\protected\controllers\SiteController.php(111): CModel->validate()
+#5 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#11 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\yiitester\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/yiitester/index.php?r=site/login
+HTTP_REFERER=http://localhost/yiitester/index.php?r=site/login
+---
+2021/07/26 12:12:59 [error] [php] Object of class CDbCriteria could not be converted to int (C:\xampp\htdocs\yiitester\protected\components\UserIdentity.php:40)
+Stack trace:
+#0 C:\xampp\htdocs\yiitester\protected\models\LoginForm.php(54): UserIdentity->authenticate()
+#1 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate()
+#2 C:\xampp\htdocs\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute()
+#3 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CInlineValidator->validate()
+#4 C:\xampp\htdocs\yiitester\protected\controllers\SiteController.php(111): LoginForm->validate()
+#5 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\yiitester\index.php(13): CWebApplication->run()
+REQUEST_URI=/yiitester/index.php?r=site/login
+in C:\xampp\htdocs\yiitester\protected\components\UserIdentity.php (40)
+in C:\xampp\htdocs\yiitester\protected\models\LoginForm.php (54)
+in C:\xampp\htdocs\yiitester\protected\controllers\SiteController.php (111)
+2021/07/26 12:14:21 [error] [exception.CException] CException: CActiveDataProvider and its behaviors do not have a method or closure named "_isset". in C:\xampp\htdocs\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\yiitester\protected\components\UserIdentity.php(40): CComponent->__call('_isset', Array)
+#1 C:\xampp\htdocs\yiitester\protected\models\LoginForm.php(54): UserIdentity->authenticate()
+#2 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#3 C:\xampp\htdocs\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#4 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), Array)
+#5 C:\xampp\htdocs\yiitester\protected\controllers\SiteController.php(111): CModel->validate()
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\yiitester\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/yiitester/index.php?r=site/login
+HTTP_REFERER=http://localhost/yiitester/index.php?r=site/login
+---
+2021/07/26 12:15:34 [error] [exception.CException] CException: CActiveDataProvider and its behaviors do not have a method or closure named "getCount". in C:\xampp\htdocs\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\yiitester\protected\components\UserIdentity.php(40): CComponent->__call('getCount', Array)
+#1 C:\xampp\htdocs\yiitester\protected\models\LoginForm.php(54): UserIdentity->authenticate()
+#2 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#3 C:\xampp\htdocs\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#4 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), Array)
+#5 C:\xampp\htdocs\yiitester\protected\controllers\SiteController.php(111): CModel->validate()
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\yiitester\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/yiitester/index.php?r=site/login
+HTTP_REFERER=http://localhost/yiitester/index.php?r=site/login
+---
+2021/07/26 12:19:26 [error] [exception.CException] CException: CActiveDataProvider and its behaviors do not have a method or closure named "calculateTotalItemCount". in C:\xampp\htdocs\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\yiitester\protected\components\UserIdentity.php(40): CComponent->__call('calculateTotalI...', Array)
+#1 C:\xampp\htdocs\yiitester\protected\models\LoginForm.php(54): UserIdentity->authenticate()
+#2 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#3 C:\xampp\htdocs\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#4 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), Array)
+#5 C:\xampp\htdocs\yiitester\protected\controllers\SiteController.php(111): CModel->validate()
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\yiitester\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/yiitester/index.php?r=site/login
+HTTP_REFERER=http://localhost/yiitester/index.php?r=site/login
+---
+2021/07/26 12:20:29 [error] [exception.Error] Error: Object of class CActiveDataProvider could not be converted to string in C:\xampp\htdocs\yiitester\protected\components\UserIdentity.php:40
+Stack trace:
+#0 C:\xampp\htdocs\yiitester\protected\models\LoginForm.php(54): UserIdentity->authenticate()
+#1 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#2 C:\xampp\htdocs\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#3 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), Array)
+#4 C:\xampp\htdocs\yiitester\protected\controllers\SiteController.php(111): CModel->validate()
+#5 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#11 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\yiitester\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/yiitester/index.php?r=site/login
+HTTP_REFERER=http://localhost/yiitester/index.php?r=site/login
+---
+2021/07/26 12:22:03 [error] [exception.CException] CException: CActiveDataProvider and its behaviors do not have a method or closure named "calculateTotalItemCount". in C:\xampp\htdocs\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\yiitester\protected\components\UserIdentity.php(40): CComponent->__call('calculateTotalI...', Array)
+#1 C:\xampp\htdocs\yiitester\protected\models\LoginForm.php(54): UserIdentity->authenticate()
+#2 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#3 C:\xampp\htdocs\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#4 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), Array)
+#5 C:\xampp\htdocs\yiitester\protected\controllers\SiteController.php(111): CModel->validate()
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\yiitester\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/yiitester/index.php?r=site/login
+HTTP_REFERER=http://localhost/yiitester/index.php?r=site/login
+---
+2021/07/26 12:22:51 [error] [exception.CException] CException: Property "CActiveDataProvider.getTotalCount" is not defined. in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yiitester\protected\components\UserIdentity.php(40): CComponent->__get('getTotalCount')
+#1 C:\xampp\htdocs\yiitester\protected\models\LoginForm.php(54): UserIdentity->authenticate()
+#2 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#3 C:\xampp\htdocs\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#4 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), Array)
+#5 C:\xampp\htdocs\yiitester\protected\controllers\SiteController.php(111): CModel->validate()
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\yiitester\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/yiitester/index.php?r=site/login
+HTTP_REFERER=http://localhost/yiitester/index.php?r=site/login
+---
+2021/07/26 12:23:08 [error] [exception.CException] CException: CActiveDataProvider and its behaviors do not have a method or closure named "getCount". in C:\xampp\htdocs\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\yiitester\protected\components\UserIdentity.php(40): CComponent->__call('getCount', Array)
+#1 C:\xampp\htdocs\yiitester\protected\models\LoginForm.php(54): UserIdentity->authenticate()
+#2 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#3 C:\xampp\htdocs\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#4 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), Array)
+#5 C:\xampp\htdocs\yiitester\protected\controllers\SiteController.php(111): CModel->validate()
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\yiitester\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/yiitester/index.php?r=site/login
+HTTP_REFERER=http://localhost/yiitester/index.php?r=site/login
+---
+2021/07/26 12:23:20 [error] [exception.CException] CException: CActiveDataProvider and its behaviors do not have a method or closure named "getTotalCount". in C:\xampp\htdocs\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\yiitester\protected\components\UserIdentity.php(40): CComponent->__call('getTotalCount', Array)
+#1 C:\xampp\htdocs\yiitester\protected\models\LoginForm.php(54): UserIdentity->authenticate()
+#2 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#3 C:\xampp\htdocs\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#4 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), Array)
+#5 C:\xampp\htdocs\yiitester\protected\controllers\SiteController.php(111): CModel->validate()
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\yiitester\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/yiitester/index.php?r=site/login
+HTTP_REFERER=http://localhost/yiitester/index.php?r=site/login
+---
+2021/07/26 12:23:25 [error] [exception.CException] CException: CActiveDataProvider and its behaviors do not have a method or closure named "getTotalCount". in C:\xampp\htdocs\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\yiitester\protected\components\UserIdentity.php(40): CComponent->__call('getTotalCount', Array)
+#1 C:\xampp\htdocs\yiitester\protected\models\LoginForm.php(54): UserIdentity->authenticate()
+#2 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#3 C:\xampp\htdocs\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#4 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), Array)
+#5 C:\xampp\htdocs\yiitester\protected\controllers\SiteController.php(111): CModel->validate()
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\yiitester\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/yiitester/index.php?r=site/login
+HTTP_REFERER=http://localhost/yiitester/index.php?r=site/login
+---
+2021/07/26 12:58:50 [error] [exception.CException] CException: Property "UserIdentity.lastname" is not defined. in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yiitester\protected\components\UserIdentity.php(36): CComponent->__get('lastname')
+#1 C:\xampp\htdocs\yiitester\protected\models\LoginForm.php(54): UserIdentity->authenticate()
+#2 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#3 C:\xampp\htdocs\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#4 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), Array)
+#5 C:\xampp\htdocs\yiitester\protected\controllers\SiteController.php(111): CModel->validate()
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\yiitester\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/yiitester/index.php?r=site/login
+HTTP_REFERER=http://localhost/yiitester/index.php?r=site/login
+---
+2021/07/26 12:59:09 [error] [exception.CException] CException: Property "CDbCriteria.user_name" is not defined. in C:\xampp\htdocs\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\schema\CDbCriteria.php(160): CComponent->__set('user_name', 'phil123')
+#1 C:\xampp\htdocs\yii\framework\db\schema\CDbCommandBuilder.php(588): CDbCriteria->__construct(Array)
+#2 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1463): CDbCommandBuilder->createCriteria(Array, Array)
+#3 C:\xampp\htdocs\yiitester\protected\components\UserIdentity.php(36): CActiveRecord->find(Array)
+#4 C:\xampp\htdocs\yiitester\protected\models\LoginForm.php(54): UserIdentity->authenticate()
+#5 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#6 C:\xampp\htdocs\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#7 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), Array)
+#8 C:\xampp\htdocs\yiitester\protected\controllers\SiteController.php(111): CModel->validate()
+#9 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#14 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#15 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\yiitester\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/yiitester/index.php?r=site/login
+HTTP_REFERER=http://localhost/yiitester/index.php?r=site/login
+---
+2021/07/26 13:02:55 [error] [exception.ParseError] ParseError: syntax error, unexpected token ";" in C:\xampp\htdocs\yiitester\protected\components\UserIdentity.php:39
+Stack trace:
+#0 C:\xampp\htdocs\yiitester\protected\models\LoginForm.php(53): YiiBase::autoload('UserIdentity')
+#1 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#2 C:\xampp\htdocs\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#3 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), Array)
+#4 C:\xampp\htdocs\yiitester\protected\controllers\SiteController.php(111): CModel->validate()
+#5 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#11 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\yiitester\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/yiitester/index.php?r=site/login
+HTTP_REFERER=http://localhost/yiitester/index.php?r=site/login
+---
+2021/07/26 13:03:19 [error] [exception.CException] CException: Property "CDbCriteria.criteria" is not defined. in C:\xampp\htdocs\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\schema\CDbCriteria.php(160): CComponent->__set('criteria', Object(CDbCriteria))
+#1 C:\xampp\htdocs\yii\framework\db\schema\CDbCommandBuilder.php(588): CDbCriteria->__construct(Array)
+#2 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1463): CDbCommandBuilder->createCriteria(Array, Array)
+#3 C:\xampp\htdocs\yiitester\protected\components\UserIdentity.php(37): CActiveRecord->find(Array)
+#4 C:\xampp\htdocs\yiitester\protected\models\LoginForm.php(54): UserIdentity->authenticate()
+#5 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#6 C:\xampp\htdocs\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#7 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), Array)
+#8 C:\xampp\htdocs\yiitester\protected\controllers\SiteController.php(111): CModel->validate()
+#9 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#14 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#15 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\yiitester\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/yiitester/index.php?r=site/login
+HTTP_REFERER=http://localhost/yiitester/index.php?r=site/login
+---
+2021/07/26 13:06:05 [error] [exception.CException] CException: Property "CDbCriteria.criteria" is not defined. in C:\xampp\htdocs\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\schema\CDbCriteria.php(160): CComponent->__set('criteria', Object(CDbCriteria))
+#1 C:\xampp\htdocs\yii\framework\db\schema\CDbCommandBuilder.php(588): CDbCriteria->__construct(Array)
+#2 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1463): CDbCommandBuilder->createCriteria(Array, Array)
+#3 C:\xampp\htdocs\yiitester\protected\components\UserIdentity.php(37): CActiveRecord->find(Array)
+#4 C:\xampp\htdocs\yiitester\protected\models\LoginForm.php(54): UserIdentity->authenticate()
+#5 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#6 C:\xampp\htdocs\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#7 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), Array)
+#8 C:\xampp\htdocs\yiitester\protected\controllers\SiteController.php(111): CModel->validate()
+#9 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#14 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#15 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\yiitester\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/yiitester/index.php?r=site/login
+HTTP_REFERER=http://localhost/yiitester/index.php?r=site/login
+---
+2021/07/26 13:12:39 [error] [exception.CDbException] CDbException: Table "users" does not have a column named "user_name". in C:\xampp\htdocs\yii\framework\db\schema\CDbCommandBuilder.php:697
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1526): CDbCommandBuilder->createColumnCriteria(Object(CMysqlTableSchema), Array, '', Array, '`t`.')
+#1 C:\xampp\htdocs\yiitester\protected\components\UserIdentity.php(27): CActiveRecord->findByAttributes(Array)
+#2 C:\xampp\htdocs\yiitester\protected\models\LoginForm.php(54): UserIdentity->authenticate()
+#3 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#4 C:\xampp\htdocs\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#5 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), Array)
+#6 C:\xampp\htdocs\yiitester\protected\controllers\SiteController.php(111): CModel->validate()
+#7 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#13 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\yiitester\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/yiitester/index.php?r=site/login
+HTTP_REFERER=http://localhost/yiitester/index.php?r=site/login
+---
+2021/07/26 13:16:38 [error] [exception.CException] CException: Property "Users.password" is not defined. in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('password')
+#1 C:\xampp\htdocs\yiitester\protected\components\UserIdentity.php(30): CActiveRecord->__get('password')
+#2 C:\xampp\htdocs\yiitester\protected\models\LoginForm.php(54): UserIdentity->authenticate()
+#3 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#4 C:\xampp\htdocs\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#5 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), Array)
+#6 C:\xampp\htdocs\yiitester\protected\controllers\SiteController.php(111): CModel->validate()
+#7 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#13 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\yiitester\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/yiitester/index.php?r=site/login
+HTTP_REFERER=http://localhost/yiitester/index.php?r=site/login
+---
+2021/07/26 13:19:13 [error] [php] Attempt to read property "user_password" on null (C:\xampp\htdocs\yiitester\protected\components\UserIdentity.php:28)
+Stack trace:
+#0 C:\xampp\htdocs\yiitester\protected\models\LoginForm.php(54): UserIdentity->authenticate()
+#1 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate()
+#2 C:\xampp\htdocs\yii\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute()
+#3 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CInlineValidator->validate()
+#4 C:\xampp\htdocs\yiitester\protected\controllers\SiteController.php(111): LoginForm->validate()
+#5 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\yiitester\index.php(13): CWebApplication->run()
+REQUEST_URI=/yiitester/index.php?r=site/login
+in C:\xampp\htdocs\yiitester\protected\components\UserIdentity.php (28)
+in C:\xampp\htdocs\yiitester\protected\models\LoginForm.php (54)
+in C:\xampp\htdocs\yiitester\protected\controllers\SiteController.php (111)

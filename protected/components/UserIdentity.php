@@ -23,28 +23,23 @@ class UserIdentity extends CUserIdentity
 	 */
 	public function authenticate()
 	{
-        // Create Query
-	    $matchquery = "SELECT * FROM `users` WHERE `user_login` = '$this->username' and `user_password` = '$this->password'";
-	    // Create Connection
-	    $connection=Yii::app()->db;
-	    // Create Command
-	    $command=$connection->createCommand($matchquery);
-	    $dataReader=$command->query();
+
+        $record=Users::model()->findByAttributes(array('user_login'=>$this->username));
+        if($record===null)
+            $this->errorCode=self::ERROR_USERNAME_INVALID;
+        else if($this->password!=$record->user_password)
+            $this->errorCode=self::ERROR_PASSWORD_INVALID;
+        else
+        {
+            $this->errorCode=self::ERROR_NONE;
+        }
+
+        return !$this->errorCode;
 
 
 
-        echo"shit";
-        echo($this->username);
-        echo($this->password);
 
-             foreach($dataReader as $row) {
-                 echo($row["user_login"]);
-                 echo($row["user_password"]);
-                 if ($row["user_login"] === $this->username and $row["user_password"] === $this->password)
-                     $this->errorCode = self::ERROR_NONE;
-                 return !$this->errorCode;
 
-             }
 	}
 	public function saveUser()
     {

@@ -10,10 +10,7 @@ $this->pageTitle=Yii::app()->name;
 <h1>To Do List</h1>
   <?php if(Yii::app()->user->getId()!=null)
 
-  { echo "<h2>Welcome "; echo Yii::app()->user->getId(); echo "</h2>";}
+  { echo "<h2>Welcome " .Yii::app()->user->getId() . "</h2>";}
   ?>
-
-
-
 
 <p>A simple to do list, version 1.0</p>
