@@ -4101,3 +4101,152 @@ REQUEST_URI=/yiitester/index.php?r=tasks/view&id=1
 in C:\xampp\htdocs\yiitester\protected\views\tasks\view.php (7)
 in C:\xampp\htdocs\yiitester\protected\controllers\TasksController.php (45)
 in C:\xampp\htdocs\yiitester\index.php (13)
+2021/07/27 11:39:06 [error] [exception.CException] CException: TasksController cannot find the requested view "tasks/view". in C:\xampp\htdocs\yii\framework\web\CController.php:881
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(785): CController->renderPartial('tasks/view', NULL, true)
+#1 C:\xampp\htdocs\yiitester\protected\controllers\TasksController.php(156): CController->render('tasks/view')
+#2 C:\xampp\htdocs\yiitester\protected\controllers\TasksController.php(45): TasksController->loadModel('2')
+#3 [internal function]: TasksController->actionView('2')
+#4 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(115): ReflectionMethod->invokeArgs(Object(TasksController), Array)
+#5 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(TasksController), Object(ReflectionMethod), Array)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('tasks/view')
+#16 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\yiitester\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/yiitester/index.php?r=tasks/view&id=2
+---
+2021/07/27 11:39:46 [error] [exception.CException] CException: TasksController cannot find the requested view "tasks/index". in C:\xampp\htdocs\yii\framework\web\CController.php:881
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(785): CController->renderPartial('tasks/index', NULL, true)
+#1 C:\xampp\htdocs\yiitester\protected\controllers\TasksController.php(156): CController->render('tasks/index')
+#2 C:\xampp\htdocs\yiitester\protected\controllers\TasksController.php(45): TasksController->loadModel('1')
+#3 [internal function]: TasksController->actionView('1')
+#4 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(115): ReflectionMethod->invokeArgs(Object(TasksController), Array)
+#5 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(TasksController), Object(ReflectionMethod), Array)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('tasks/view')
+#16 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\yiitester\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/yiitester/index.php?r=tasks/view&id=1
+---
+2021/07/27 11:41:25 [error] [php] Attempt to read property "task_id" on null (C:\xampp\htdocs\yiitester\protected\views\tasks\view.php:7)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): TasksController->renderInternal()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(872): TasksController->renderFile()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(785): TasksController->renderPartial()
+#4 C:\xampp\htdocs\yiitester\protected\controllers\TasksController.php(45): TasksController->render()
+#5 unknown(0): TasksController->actionView()
+#6 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(115): ReflectionMethod->invokeArgs()
+#7 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): TasksController->runAction()
+#10 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#12 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): TasksController->filterAccessControl()
+#13 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(265): TasksController->runActionWithFilters()
+#16 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): TasksController->run()
+#17 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\yiitester\index.php(13): CWebApplication->run()
+REQUEST_URI=/yiitester/index.php?r=tasks/view&id=1
+in C:\xampp\htdocs\yiitester\protected\views\tasks\view.php (7)
+in C:\xampp\htdocs\yiitester\protected\controllers\TasksController.php (45)
+in C:\xampp\htdocs\yiitester\index.php (13)
+2021/07/27 11:41:52 [error] [php] Attempt to read property "task_id" on bool (C:\xampp\htdocs\yiitester\protected\views\tasks\view.php:7)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): TasksController->renderInternal()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(872): TasksController->renderFile()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(785): TasksController->renderPartial()
+#4 C:\xampp\htdocs\yiitester\protected\controllers\TasksController.php(45): TasksController->render()
+#5 unknown(0): TasksController->actionView()
+#6 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(115): ReflectionMethod->invokeArgs()
+#7 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): TasksController->runAction()
+#10 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#12 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): TasksController->filterAccessControl()
+#13 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(265): TasksController->runActionWithFilters()
+#16 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): TasksController->run()
+#17 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\yiitester\index.php(13): CWebApplication->run()
+REQUEST_URI=/yiitester/index.php?r=tasks/view&id=1
+in C:\xampp\htdocs\yiitester\protected\views\tasks\view.php (7)
+in C:\xampp\htdocs\yiitester\protected\controllers\TasksController.php (45)
+in C:\xampp\htdocs\yiitester\index.php (13)
+2021/07/27 11:47:24 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in C:\xampp\htdocs\yii\framework\web\CController.php:337
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('tasks/view')
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\yiitester\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yiitester/index.php?r=tasks/view
+---
+2021/07/27 11:47:49 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in C:\xampp\htdocs\yii\framework\web\CController.php:337
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('tasks/view')
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\yiitester\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yiitester/index.php?r=tasks/view
+---
+2021/07/27 11:47:49 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in C:\xampp\htdocs\yii\framework\web\CController.php:337
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('tasks/view')
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\yiitester\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yiitester/index.php?r=tasks/view
+---

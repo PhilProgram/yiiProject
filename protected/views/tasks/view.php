@@ -20,9 +20,6 @@ $this->menu=array(
 
 <?php
 
-// Check if user is logged in and task model login is same is app login 
-if (Yii::app()->user->getId()!=null && $model->user_login==Yii::app()->user->getId())
-{
 $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
@@ -31,4 +28,4 @@ $this->widget('zii.widgets.CDetailView', array(
 		'task_name',
 		'task_description',
 	),
-));} ?>
+)); ?>

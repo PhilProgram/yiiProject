@@ -147,8 +147,17 @@ class TasksController extends Controller
 	 */
 	public function loadModel($id)
 	{
-
+	    
         $model=Tasks::model()->findByPk($id);
+
+        // Verify user is logged in in order to see task
+        // User can only see his tasks
+        if (Yii::app()->user->getId()==null || $model->user_login!=Yii::app()->user->getId())
+        {
+            $this->redirect(array('tasks/index'));
+
+        }
+
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
