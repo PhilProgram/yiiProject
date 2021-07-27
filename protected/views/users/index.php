@@ -17,7 +17,7 @@ $this->menu=array(
 <?php
 if(Yii::app()->user->getId()==null)
 {
-    echo"Please login or create a user";
+    echo "Please login or create a user";
 }
 else
 $this->widget('zii.widgets.CListView', array(
