@@ -26,24 +26,52 @@ class TasksController extends Controller
 	 */
 	public function accessRules()
 	{
+
 		return array(
-			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
-				'users'=>array('*'),
+            array('allow',  // allow all users to perform 'index'
+                'actions'=>array('index'),
+                'users'=>array('*'),
+
+            ),
+			array('allow',  // allow authorized users to manage their tasks
+				'actions'=>array('index','view','update','create','delete'),
+                'users'=>array('@'),
+                'expression'=>"Yii::app()->controller->isTaskOwner()",
 			),
+            array('allow',  // if user is logged in, they can manage their own tasks
+                'actions'=>array('admin'),
+                'users'=>array('@'),
+            ),
+
+            array('deny',  // deny all users not logged in
+                'users'=>array('*'),
+            ),
+
 		);
 	}
-
+	// Verifys that the task belongs to the user who is logged in
+    public function isTaskOwner() {
+        $task = Tasks::model()->findByPk($_GET['id']);
+        $owner_id = $task->user_login;
+        if(Yii::app()->user->getId() === $owner_id)
+            return true;
+        return false;
+    }
 	/**
 	 * Displays a particular model.
 	 * @param integer $id the ID of the model to be displayed
 	 */
 	public function actionView($id)
 	{
+       // if(!Yii::app()->user->checkAccess('view'))
+         //   echo Yii::app()->user->getId();
+            //throw new CHttpException(403,'Access Denied.');
 
-		$this->render('view',array(
-			'model'=>$this->loadModel($id),
-		));
+        $this->render('view', array(
+            'model' => $this->loadModel($id),
+
+        ));
+
 	}
 
 	/**
@@ -112,6 +140,9 @@ class TasksController extends Controller
 	 */
 	public function actionIndex()
 	{
+        //if(!Yii::app()->user->checkAccess('index'))
+          //  throw new CHttpException(403,'Access Denied.');
+
         $criteria=new CDbCriteria;
         $criteria->compare('user_login',Yii::app()->user->getId(),true);
 
@@ -147,16 +178,7 @@ class TasksController extends Controller
 	 */
 	public function loadModel($id)
 	{
-	    
         $model=Tasks::model()->findByPk($id);
-
-        // Verify user is logged in in order to see task
-        // User can only see his tasks
-        if (Yii::app()->user->getId()==null || $model->user_login!=Yii::app()->user->getId())
-        {
-            $this->redirect(array('tasks/index'));
-
-        }
 
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');

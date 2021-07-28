@@ -49,44 +49,6 @@ class SiteController extends Controller
 	/**
 	 * Displays the contact page
 	 */
-	public function actionRegister()
-	{
-
-        $model= new RegisterForm;
-
-
-        // if it is ajax validation request
-
-        if(isset($_POST['ajax']) && $_POST['ajax']==='registration-form')
-        {
-            echo CActiveForm::validate($model);
-            Yii::app()->end();
-        }
-
-        // collect user input data
-        if(isset($_POST['RegisterForm']))
-        {
-            $model->attributes=$_POST['RegisterForm'];
-
-            $newUser = new UserIdentity($model->username,$model->password, $model->email,$model->firstname, $model->lastname);
-                /*$newUser->first_name = $model->first_name;
-                $newUser->last_name = $model->last_name;
-                $newUser->email = $model->email;
-                $newUser->pass = hash_hmac('sha256', $model->password, Yii::app()->params['encryptionKey']);
-                $newUser->active = md5(uniqid(rand(), true));
-*/
-                //$newUser->live = 1;
-
-                if($newUser->saveUser()) {
-
-                    // Everything saved, redirect
-                    $this->redirect(array('site/index'));
-                }
-            }
-
-        // display the register form
-        $this->render('register',array('model'=>$model));
-	}
 
 	/**
 	 * Displays the login page
